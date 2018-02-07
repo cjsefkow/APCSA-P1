@@ -39,9 +39,22 @@ public class ShapePanel extends JPanel
 		window.drawString("CREATE YOUR OWN SHAPE!",40,40);
 
 
-		//instantiate a Shape
-		//tell your shape to draw
-
+		Shape shape1 = new Shape(200, 200, 100, 100, Color.BLACK);
+		window.setColor(Color.BLUE);
+		window.fillRect(100, 100, 50, 50);
+		window.setColor(Color.RED);
+		window.fillRect(110, 110, 30, 30);
+		
+		window.setColor(Color.BLUE);
+		window.fillRect(300, 100, 50, 50);
+		window.setColor(Color.RED);
+		window.fillRect(310, 110, 30, 30);
+		
+		window.setColor(Color.BLUE);
+		window.fillRect(50, 300, 25, 25);
+		window.setColor(Color.RED);
+		window.fillRect(55, 305, 15, 15);
+		
 		//instantiate a Shape
 		//tell your shape to draw
 

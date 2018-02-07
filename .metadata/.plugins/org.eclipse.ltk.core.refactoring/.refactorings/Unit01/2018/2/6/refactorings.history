@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;Unit01&apos;&#x0D;&#x0A;- Original project: &apos;Unit01&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     GraphicsRunner.java&#x0D;&#x0A;     Robot.java&#x0D;&#x0A;     Shape.java&#x0D;&#x0A;     ShapePanel.java" description="Delete elements" element1="/src&lt;{GraphicsRunner.java" element2="/src&lt;{Robot.java" element3="/src&lt;{Shape.java" element4="/src&lt;{ShapePanel.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1517936912147" subPackages="false" version="1.0"/>
+</session>

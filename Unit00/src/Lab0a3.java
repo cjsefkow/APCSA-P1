@@ -16,7 +16,16 @@ public class Lab0a3
 		System.out.println("                /\\                " );
 		System.out.println("               /  \\               " );
 		System.out.println("              /    \\              " );
-		System.out.println("             [------]             " );
+		System.out.println("             [------]              " );
+		System.out.println("              | . .|               " );
+		System.out.println("              |  > |               " );
+		System.out.println("               \\__/               " );
+		System.out.println("              \\ || /              " );
+		System.out.println("               \\||/               " );
+		System.out.println("                ||                 " );
+		System.out.println("                ||                 " );
+		System.out.println("               /  \\               " );
+		System.out.println("              /    \\              " );
 		//add other output
 
 		System.out.println(" \n\n\n\nHelpFul Hints" );

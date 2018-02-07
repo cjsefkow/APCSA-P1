@@ -6,6 +6,7 @@
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Window;
 
 public class Shape
 {
@@ -19,7 +20,11 @@ public class Shape
    public Shape(int x, int y, int wid, int ht, Color col)
    {
 		xPos = x;
-		//finish this constructor
+		yPos = y;
+		width = wid;
+		height = ht;
+		color = col;
+		
    }
 
 
