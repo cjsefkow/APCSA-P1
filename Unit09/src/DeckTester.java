@@ -35,10 +35,3 @@ public class DeckTester {
 		
 	}
 }
-
-/** Lab Assessment tomorrow
- * In eclipse
- * Read prompt
- * 40 mins
- * Number manipulation - 2 parts
-**/
