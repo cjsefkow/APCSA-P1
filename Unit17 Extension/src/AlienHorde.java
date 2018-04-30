@@ -16,18 +16,20 @@ import java.util.List;
 public class AlienHorde
 {
 	private List<Alien> aliens;
+	
+	public int sizeOfAlien = 20;
+	private int verticalShift = 20;
 
 	public AlienHorde(int size)
 	{
 		aliens = new ArrayList<Alien>();
 		for (int i = 0; i < size; i++) {
-			int num = i*60;
-			int col = 10;
-			int sizeOfAlien = 40;
+			int num = i*sizeOfAlien;
+			int col = verticalShift;
 			int startingDirection = 1;
 			while (num >= 800 - sizeOfAlien) {
 				num -= 800 - sizeOfAlien;
-				col += 60;
+				col += verticalShift;
 				startingDirection *= -1;
 			}
 			aliens.add(new Alien(num, col, sizeOfAlien, sizeOfAlien, 2*startingDirection));
@@ -51,14 +53,14 @@ public class AlienHorde
 	{
 		for (Alien alien : aliens) {
 			if (alien.getX() < 0 || alien.getX() > 800 - alien.getWidth()) {
-				alien.setY(alien.getY()+60);
+				alien.setY(alien.getY()+verticalShift);
 				alien.setSpeed(alien.getSpeed()*-1);
-			}
-			
-			for (Block block : blocks) {
-				if (alien.getX() + alien.getSpeed() == block.getX() && alien.getY() == block.getY()) {
-					alien.setY(alien.getY()+60);
-					alien.setSpeed(alien.getSpeed()*-1);
+			} else { 
+				for (Block block : blocks) {
+					if (alien.getX() + alien.getSpeed() == block.getX() && alien.getY() == block.getY()) {
+						alien.setY(alien.getY()+verticalShift);
+						alien.setSpeed(alien.getSpeed()*-1);
+					}
 				}
 			}
 			
@@ -91,7 +93,7 @@ public class AlienHorde
 	
 	public boolean gameover() {
 		for (Alien alien : aliens) {
-			if (alien.getY() > 590) {
+			if (alien.getY() > 560) {
 				return true;
 			}
 		} return false;

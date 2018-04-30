@@ -35,7 +35,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 
 		keys = new boolean[5];
 
-		ship = new Ship(100, 100, 50, 50, 5);
+		ship = new Ship(100, 100, 40, 40, 3);
 		shots = new Bullets();
 		horde = new AlienHorde(level);
 
@@ -70,7 +70,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		graphToBack.drawString("Level " + (level), 25, 50 );
 		if (horde.gameover() == true) {
 			graphToBack.setColor(Color.RED);
-			graphToBack.drawString("Game Over", 400, 300);
+			graphToBack.drawString("Game Over! You Reached Level " + level, 300, 300);
 		}
 
 		twoDGraph.drawImage(back, null, 0, 0);
@@ -118,7 +118,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		
 		int[] toBlock = horde.removeDeadOnes(shots);
 		if (toBlock[0] != -1) {
-			blocks.add(new Block(toBlock[0], toBlock[1], 10));
+			blocks.add(new Block(horde.sizeOfAlien*(toBlock[0]/horde.sizeOfAlien), toBlock[1], 15));
 		}
 		
 		if (horde.toString() == "") {
