@@ -118,7 +118,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		
 		int[] toBlock = horde.removeDeadOnes(shots);
 		if (toBlock[0] != -1) {
-			blocks.add(new Block(horde.sizeOfAlien*(toBlock[0]/horde.sizeOfAlien), toBlock[1], 15));
+			blocks.add(new Block(horde.SIZE_OF_ALIEN*(toBlock[0]/horde.SIZE_OF_ALIEN), toBlock[1], 15));
 		}
 		
 		if (horde.toString() == "") {

@@ -17,22 +17,22 @@ public class AlienHorde
 {
 	private List<Alien> aliens;
 	
-	public int sizeOfAlien = 20;
-	private int verticalShift = 20;
+	public static int SIZE_OF_ALIEN = 20;
+	private static int VERTICAL_SHIFT = 20;
 
 	public AlienHorde(int size)
 	{
 		aliens = new ArrayList<Alien>();
 		for (int i = 0; i < size; i++) {
-			int num = i*sizeOfAlien;
-			int col = verticalShift;
+			int num = i*SIZE_OF_ALIEN;
+			int col = VERTICAL_SHIFT;
 			int startingDirection = 1;
-			while (num >= 800 - sizeOfAlien) {
-				num -= 800 - sizeOfAlien;
-				col += verticalShift;
+			while (num >= 800 - SIZE_OF_ALIEN) {
+				num -= 800 - SIZE_OF_ALIEN;
+				col += VERTICAL_SHIFT;
 				startingDirection *= -1;
 			}
-			aliens.add(new Alien(num, col, sizeOfAlien, sizeOfAlien, 2*startingDirection));
+			aliens.add(new Alien(num, col, SIZE_OF_ALIEN, SIZE_OF_ALIEN, 2*startingDirection));
 //			System.out.println("Added alien at (" + num + ", " + col + ")");
 		}
 	}
@@ -53,12 +53,12 @@ public class AlienHorde
 	{
 		for (Alien alien : aliens) {
 			if (alien.getX() < 0 || alien.getX() > 800 - alien.getWidth()) {
-				alien.setY(alien.getY()+verticalShift);
+				alien.setY(alien.getY()+VERTICAL_SHIFT);
 				alien.setSpeed(alien.getSpeed()*-1);
 			} else { 
 				for (Block block : blocks) {
 					if (alien.getX() + alien.getSpeed() == block.getX() && alien.getY() == block.getY()) {
-						alien.setY(alien.getY()+verticalShift);
+						alien.setY(alien.getY()+VERTICAL_SHIFT);
 						alien.setSpeed(alien.getSpeed()*-1);
 					}
 				}
